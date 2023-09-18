@@ -1,5 +1,5 @@
 (try
   (raise KeyError)
-  (except [KeyError]
-          (print "error "))
+  (except [e KeyError]
+          (print "error " (repr e)))
 )
