@@ -31,4 +31,6 @@
   (.append list (bs a 7))
 )
 
-;;'(list (map inc list)) 
+;'(list (map inc list)) 
+;(print (list (filter (fn [x] (% x 2)) (range 10))))
+;(print '(list (map (fn [x](+ x 1)) list)))
