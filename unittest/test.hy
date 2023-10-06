@@ -7,6 +7,9 @@
   (defn [] test11 [self]
     (self.assertEqual 11, 11)
   )
-)
+  (defn [] testtrue [self]
+    (self.assertTrue True)
+  )
+)  
 
 (unittest.main)
