@@ -25,12 +25,22 @@
 ;;(print f"The index of 36 is {(bs arr 36)}")
 ;;(print f"The index of 1 is {(bs arr 1)}")
 
+(defn reduce [col f]
+  (let [result 0]
+    (for [a col]
+      (setv result (+ (f a) result)))
+    result
+  ) 
+)
+
 (setv list [])
 (setv aa [[3 6 7 10 14 19 21 25 36] [3 6 7 10 14 19 21 25 36] [3 6 7 10 14 19 21 25 36]])
 (for [a aa]
   (.append list (bs a 7))
 )
+(print list)
 
-;'(list (map inc list)) 
-;(print (list (filter (fn [x] (% x 2)) (range 10))))
-;(print '(list (map (fn [x](+ x 1)) list)))
+(print (reduce list (fn [x] (+ x 1))))
+
+;; TODO should be a function here
+;; 
