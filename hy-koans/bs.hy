@@ -18,12 +18,15 @@
   (binary-search arr x 0 (- (len arr) 1))
 )
 
+;;
+;; Testing the binary seach
+;;
 (setv arr [3 6 7 10 14 19 21 25 36])
-;;(print f"Array == {arr}")
-;;(print f"The index of 7 is {(bs arr 7)}")
-;;(print f"The index of 14 is {(bs arr 14)}")
-;;(print f"The index of 36 is {(bs arr 36)}")
-;;(print f"The index of 1 is {(bs arr 1)}")
+(print f"Array == {arr}")
+(print f"The index of 7 is {(bs arr 7)}")
+(print f"The index of 14 is {(bs arr 14)}")
+(print f"The index of 36 is {(bs arr 36)}")
+(print f"The index of 1 is {(bs arr 1)}")
 
 (defn reduce [col f]
   (let [result 0]
@@ -40,7 +43,5 @@
 )
 (print list)
 
+(print (reduce list inc))
 (print (reduce list (fn [x] (+ x 1))))
-
-;; TODO should be a function here
-;; 
